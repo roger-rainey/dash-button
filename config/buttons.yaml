@@ -1,0 +1,12 @@
+buttons:
+  - brand: 'Dash button type'
+    mac: 'da:sh:ma:ca:dd:re:ss'
+    service: 
+      - service_type: 'home-assistant'
+        http_headers: 
+          http_header: 'x-ha-access'
+          http_header_value: 'youraccesskeyhere'
+        content_type: 'application/json'
+        payload:
+          entity_id: 'light.ge_12724_3way_dimmer_switch_level'
+          url: 'http://server_name_or_ip_address:8123/api/services/light/toggle'
