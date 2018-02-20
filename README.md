@@ -7,7 +7,7 @@ contains dockerfile to build this machine. The docker container will need to hav
 
 Example of how to run it
 docker build -t docker-image .
-docker run --privileged -d -v config/:/usr/src/app/config/ docker-image
+; docker run --privileged --net=host --name=dash-buttons -d -v config/:/usr/src/app/config/ docker-image
 
 
 Image is also on docker hub rrainey/dash-buttons:latest
