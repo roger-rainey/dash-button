@@ -39,4 +39,4 @@ def arp_display(pkt):
 			index = macList.index(pkt[ARP].hwsrc)
 			button_action(index)
 
-print (sniff(prn=arp_display, filter="arp", store=0))
+print(sniff(prn=arp_display, filter="arp", store=0))
