@@ -17,6 +17,7 @@ macList = [] # Gather a list of Dash buttons
 
 for button in byaml['buttons']:
 	macList.append(button['mac'])
+	print("Mac address entered: ", button['mac'])
 
 lastTime = 0 # Keep from running too often
 def button_action(index):
@@ -31,6 +32,7 @@ def button_action(index):
 							'Content-Type' : service['content_type'] }
 				payload = { 'entity_id' : service['payload']['entity_id'] }
 				req = requests.post(service['payload']['url'], data=json.dumps(payload), headers=headers)
+				print(byaml['buttons'][index]['brand'], " button pressed")
 		lastTime = time.time()
 
 def arp_display(pkt):
